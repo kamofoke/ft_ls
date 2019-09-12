@@ -6,7 +6,7 @@
 /*   By: kamofoke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 14:40:55 by kamofoke          #+#    #+#             */
-/*   Updated: 2019/09/10 11:42:09 by kamofoke         ###   ########.fr       */
+/*   Updated: 2019/09/12 14:03:33 by kamofoke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,68 +21,72 @@
 #include <pwd.h>
 #include <fcntl.h>
 
-typedef		int t_bool
+typedef int			t_bool;
 
-typedef 	struct s_files
+typedef struct		s_files
 {
-	char 			*name;
+	char			*name;
 	char			*link;
-	struct			s_files *next;
-	struct			s_files *preview;
-	struct			s_files *sub_dir;
-	struct			stat  stat;
+	struct s_files	*next;
+	struct s_files	*prev;
+	struct s_files	*sub_dir;
+	struct stat		stat;
 	time_t			mtime;
 	time_t			atime;
+	mode_t			st_mode;
+	nlink_t			st_nlink;
+	uid_t			st_uid;
+	gid_t			st_gid;
+	off_t			st_size;
+	ino_t			st_ino;
+	blkcnt_t		st_blocks;
+	struct dirent	*dptr;
+}					t_files;
 
-}					t_files
-
-typedef		struct s_flags
+typedef struct		s_flags
 {
-	t_bool			a;
 	t_bool			l;
-	t_bool			R;
-	t_bool			r;
+	t_bool			a;
 	t_bool			t;
+	t_bool			sm_r;
+	t_bool			lg_r;
+	t_bool			f;
+	t_bool			g;
+	t_bool			u;
+}					t_flags;
 
-}					t_flags
-
-typedef		struct	s_r
+typedef struct		s_r
 {
 	DIR				*ds;
-	struct	dirent 	*d;
+	struct dirent	*d;
 	t_files			*files;
+}					t_r;
 
-}					t_r
-
-typedef 	struct	s_start
+typedef struct		s_start
 {
-	int		start;
-	int		selected;
+	int				start;
+	int				selected;
+}					t_start;
 
-}					t_start
-
-typedef		struct	s_list
+typedef struct		s_lists
 {
 	t_files			*files;
-	t_files			tmp;
-	t_files			tmp2;
-}					t_list
+	t_files			*tmp;
+	t_files			*tmp2;
+}					t_lists;
 
-typedef		struct	s_single
+typedef struct		s_single
 {
 	t_files			*alist;
-	struct	stat  	fstat;
+	struct stat		fstat;
 	char			*nw_path;
+}					t_single;
 
-}					t_single
-
-
-typedef		struct	s_main
+typedef struct		s_main
 {
-	t_flags			cflags;
-	int 			start;
+	t_flags			flags;
+	int				start;
 	char			*pwd;
-}					t_main
-
+}
 
 #endif

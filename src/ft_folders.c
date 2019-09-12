@@ -6,7 +6,7 @@
 /*   By: kamofoke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/11 14:54:53 by kamofoke          #+#    #+#             */
-/*   Updated: 2019/09/11 14:55:21 by kamofoke         ###   ########.fr       */
+/*   Updated: 2019/09/12 14:29:17 by kamofoke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,11 @@ void ft_execute(char *ptr)
 {
 	ft_putstr(ptr);
 	ft_putchar('\n');
+}
+
+void	ft_exit(const char *message)
+{
+	if (message != NULL)
+		ft_putendl_fd(message, 1);
+	exit(1);
 }
