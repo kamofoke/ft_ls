@@ -12,7 +12,7 @@
 
 #include "../ft_ls.h"
 
-char	*make_path(char *dir, char *file)
+char	*make_path_fl(char *dir, char *file)
 {
 	char	*new_path;
 	size_t	l;
