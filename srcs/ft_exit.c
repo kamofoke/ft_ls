@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ls.c                                            :+:      :+:    :+:   */
+/*   ft_exit.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kamofoke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/09 09:32:43 by kamofoke          #+#    #+#             */
-/*   Updated: 2019/09/10 09:31:34 by kamofoke         ###   ########.fr       */
+/*   Created: 2019/09/16 09:41:36 by kamofoke          #+#    #+#             */
+/*   Updated: 2019/09/16 09:42:08 by kamofoke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_ls.h"
+#include "../ft_ls.h"
 
-void	ft_list_dir(char *path)
+void	ft_exit(const char *message)
 {
-	DIR				*dir;
-	struct dirent	*sd;
-
-	dir = opendir(path);
-	if (dir == NULL)
-		return ;
-	while ((sd = readdir(dir)))
-		ft_putendl(sd->d_name);
-	return ;
+	if (message != NULL)
+		ft_putendl_fd(message, 1);
+	exit(1);
 }

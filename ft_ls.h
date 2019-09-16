@@ -5,19 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kamofoke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/09 14:40:55 by kamofoke          #+#    #+#             */
-/*   Updated: 2019/09/16 17:43:50 by kamofoke         ###   ########.fr       */
+/*   Created: 2019/09/16 17:08:45 by kamofoke          #+#    #+#             */
+/*   Updated: 2019/09/16 17:10:16 by kamofoke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LS_H								
+#ifndef FT_LS_H									//"if the following is not defined."
 #define FT_LS_H
 
 # define TRUE 1
 # define FALSE 0
 
 
-#include "../Libft/libft.h"
+#include "Libft/libft.h"
 # include <stdio.h>
 # include <string.h>
 # include <stdlib.h>
@@ -32,6 +32,7 @@
 # include <time.h>
 # include <errno.h>
 
+//#include "ft_list_dir.c"
 
 typedef int			t_bool;
 
@@ -101,7 +102,7 @@ typedef struct		s_main
 	char			*pwd;
 }					t_main;
 
-void				ft_exit(const char *message);
+void	ft_exit(const char *message);
 void				ft_folder_color_r(char *ptr);
 void				ft_exec_color_r(char *ptr);
 void				ft_symlinkcolor(t_files *file, t_flags flags);
