@@ -6,7 +6,7 @@
 /*   By: kamofoke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 11:32:36 by kamofoke          #+#    #+#             */
-/*   Updated: 2019/09/16 16:18:25 by kamofoke         ###   ########.fr       */
+/*   Updated: 2019/09/17 10:00:58 by kamofoke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void			ft_flags(char *flags, t_flags *f, int x)
 
 void				ft_which_flags(char *flags, t_flags *f)
 {
-	int			x;
+	int		x;
 
 	x = 1;
 	while (flags[x] != '\0')

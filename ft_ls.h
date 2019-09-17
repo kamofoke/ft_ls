@@ -6,18 +6,16 @@
 /*   By: kamofoke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 17:08:45 by kamofoke          #+#    #+#             */
-/*   Updated: 2019/09/16 17:10:16 by kamofoke         ###   ########.fr       */
+/*   Updated: 2019/09/17 10:13:55 by kamofoke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LS_H									//"if the following is not defined."
-#define FT_LS_H
-
+#ifndef FT_LS_H
+# define FT_LS_H
 # define TRUE 1
 # define FALSE 0
 
-
-#include "Libft/libft.h"
+# include "Libft/libft.h"
 # include <stdio.h>
 # include <string.h>
 # include <stdlib.h>
@@ -31,8 +29,6 @@
 # include <grp.h>
 # include <time.h>
 # include <errno.h>
-
-//#include "ft_list_dir.c"
 
 typedef int			t_bool;
 
@@ -131,6 +127,5 @@ t_files				*ft_list(char *curr_dir, t_flags flags);
 void				ft_free_lst(t_files *file);
 void				ft_free_lst_rvrs(t_files *file);
 void				ft_free_r(t_files *file);
-
 
 #endif

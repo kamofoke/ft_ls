@@ -6,7 +6,7 @@
 /*   By: kamofoke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 09:36:44 by kamofoke          #+#    #+#             */
-/*   Updated: 2019/09/16 09:38:57 by kamofoke         ###   ########.fr       */
+/*   Updated: 2019/09/17 10:02:27 by kamofoke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ t_files			*ft_list(char *curr_dir, t_flags flags)
 		lists.tmp = lists.tmp->next;
 	}
 	ft_print_r(lists.tmp, flags);
-	// if (flags.lg_r == TRUE)
-	// 	ft_list_b(lists.tmp2, curr_dir, flags);
+	if (flags.lg_r == TRUE)
+		ft_list_b(lists.tmp2, curr_dir, flags);
 	return (lists.files);
 }
