@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_ls.h"
+#include "../include/ft_ls.h"
 
 void			ft_free_lst(t_files *file)
 {

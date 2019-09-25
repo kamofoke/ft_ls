@@ -5,19 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kamofoke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/09 14:40:55 by kamofoke          #+#    #+#             */
-/*   Updated: 2019/09/16 17:43:50 by kamofoke         ###   ########.fr       */
+/*   Created: 2019/09/16 17:08:45 by kamofoke          #+#    #+#             */
+/*   Updated: 2019/09/17 10:13:55 by kamofoke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LS_H								
-#define FT_LS_H
-
+#ifndef FT_LS_H
+# define FT_LS_H
 # define TRUE 1
 # define FALSE 0
 
-
-#include "../Libft/libft.h"
+# include "../Libft/libft.h"
+# include "../include/ft_ls.h"
 # include <stdio.h>
 # include <string.h>
 # include <stdlib.h>
@@ -31,7 +30,6 @@
 # include <grp.h>
 # include <time.h>
 # include <errno.h>
-
 
 typedef int			t_bool;
 
@@ -130,6 +128,5 @@ t_files				*ft_list(char *curr_dir, t_flags flags);
 void				ft_free_lst(t_files *file);
 void				ft_free_lst_rvrs(t_files *file);
 void				ft_free_r(t_files *file);
-
 
 #endif

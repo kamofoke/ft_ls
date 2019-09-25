@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_ls.h"
+#include "../include/ft_ls.h"
 
 void		ft_folder_color_r(char *ptr)
 {

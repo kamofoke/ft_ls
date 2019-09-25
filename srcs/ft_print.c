@@ -6,23 +6,23 @@
 /*   By: kamofoke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/11 14:57:40 by kamofoke          #+#    #+#             */
-/*   Updated: 2019/09/16 16:38:42 by kamofoke         ###   ########.fr       */
+/*   Updated: 2019/09/20 12:42:19 by kamofoke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_ls.h"
+#include "../include/ft_ls.h"
 
 void			ft_printinfo(struct stat st)
 {
 	struct group		*p;
 
 	ft_putnbr((int)st.st_nlink);
-	ft_putchar(' ');
+	ft_putchar('\t');
 	p = getgrgid(st.st_gid);
 	ft_putstr(p->gr_name);
-	ft_putchar(' ');
+	ft_putchar('\t');
 	ft_putnbr((long long)st.st_size);
-	ft_putchar(' ');
+	ft_putchar('\t');
 }
 
 void			ft_printtime(struct stat st)

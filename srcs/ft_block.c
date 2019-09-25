@@ -6,11 +6,11 @@
 /*   By: kamofoke <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/12 11:22:54 by kamofoke          #+#    #+#             */
-/*   Updated: 2019/09/16 10:20:46 by kamofoke         ###   ########.fr       */
+/*   Updated: 2019/09/20 12:30:51 by kamofoke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_ls.h"
+#include "../include/ft_ls.h"
 
 void			ft_print_block(int block, t_flags flags)
 {

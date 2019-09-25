@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_ls.h"
+#include "../include/ft_ls.h"
 
 void			sorted_insert(t_files **head, t_files *new_node)
 {

@@ -10,10 +10,10 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ft_ls
+NAME =ft_ls.a
 
 
-FLAGS = -g -Wall -Wextra -Werror -I include
+FLAGS = -Wall -Wextra -Werror -o ft_ls
 
 SRCS = srcs/main.c \
 			srcs/ft_printcolor.c \
